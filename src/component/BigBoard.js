@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import MoveButton from './MoveButton.js';
+import MidBoard from './MidBoard.js';
 
 class Board extends Component {
   render() {
     return (
       <div>
         <div>
-          <MoveButton/>
+          <MoveButton />
         </div>
         <div>
-          <MoveButton/>
-          <MoveButton/>
+          <MoveButton />
+          <MidBoard />
+          <MoveButton />
         </div>
       </div>
     );
