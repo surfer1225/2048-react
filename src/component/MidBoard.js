@@ -8,8 +8,24 @@ class MidBoard extends Component {
         <div>
           <BoardButton/>
           <BoardButton/>
+          <BoardButton/>
+          <BoardButton/>
         </div>
         <div>
+          <BoardButton/>
+          <BoardButton/>
+          <BoardButton/>
+          <BoardButton/>
+        </div>
+        <div>
+          <BoardButton/>
+          <BoardButton/>
+          <BoardButton/>
+          <BoardButton/>
+        </div>
+        <div>
+          <BoardButton/>
+          <BoardButton/>
           <BoardButton/>
           <BoardButton/>
         </div>

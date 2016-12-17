@@ -7,12 +7,14 @@ class Board extends Component {
     return (
       <div>
         <div>
-          <MoveButton />
+          <MoveButton value="left"/>
+          <MoveButton value="up"/>
+          <MoveButton value="down"/>
+          <MoveButton value="right"/>
         </div>
+        <br/>
         <div>
-          <MoveButton />
           <MidBoard />
-          <MoveButton />
         </div>
       </div>
     );
