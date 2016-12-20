@@ -14,7 +14,7 @@ class Board extends Component {
       buttons: tempButtons
     };
   }
-  
+
   render() {
     return (
       <div>
@@ -26,7 +26,7 @@ class Board extends Component {
         </div>
         <br/>
         <div>
-          <MidBoard />
+          <MidBoard buttons={this.state.buttons}/>
         </div>
       </div>
     );
