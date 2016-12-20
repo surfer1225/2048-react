@@ -4,21 +4,17 @@ import BoardButton from './BoardButton.js';
 class MidBoard extends Component {
   constructor() {
     super();
+    let tempButtons = Array(16).fill(0);
+    let num1 = Math.floor(Math.random()*16);
+    let num2 = Math.floor(Math.random()*16);
+    tempButtons[num1] = 2;
+    tempButtons[num2] = 2;
     this.state = {
-      buttons: Array(16).fill(0)
+      buttons: tempButtons
     };
   }
 
   render() {
-    let num1 = Math.floor(Math.random()*16);
-    let num2 = Math.floor(Math.random()*16);
-    let tempButtons = this.state.buttons;
-    console.log(tempButtons);
-    tempButtons[num1] = 2;
-    tempButtons[num2] = 2;
-    this.setState({
-      buttons: tempButtons,
-    })
     return (
       <div>
         <div>
