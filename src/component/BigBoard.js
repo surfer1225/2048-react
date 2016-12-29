@@ -15,6 +15,15 @@ class Board extends Component {
     };
   }
 
+  seedOne() {
+    let tempButtons = this.state.tbuttons;
+    let num = Math.floor(Math.random()*16);
+    tempButtons[num] = 2;
+    this.state = {
+      buttons: tempButtons
+    };
+  }
+
   render() {
     return (
       <div>
