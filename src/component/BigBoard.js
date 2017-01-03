@@ -8,6 +8,9 @@ class Board extends Component {
     let tempButtons = Array(16).fill(0);
     let num1 = Math.floor(Math.random()*16);
     let num2 = Math.floor(Math.random()*16);
+    while (num2===num1) {
+      num2 = Math.floor(Math.random()*16);
+    }
     tempButtons[num1] = 2;
     tempButtons[num2] = 2;
     this.state = {
@@ -38,6 +41,10 @@ class Board extends Component {
       console.log("no more zero");
       return;
     }
+  }
+
+  move(dir) {
+    return;
   }
 
   checkGame() {
