@@ -7,28 +7,28 @@ class MidBoard extends Component {
     return (
       <div>
         <div>
-          <BoardButton value={this.props.buttons[0]}/>
-          <BoardButton value={this.props.buttons[1]}/>
-          <BoardButton value={this.props.buttons[2]}/>
-          <BoardButton value={this.props.buttons[3]}/>
+          <BoardButton value={this.props.buttons[0][0]}/>
+          <BoardButton value={this.props.buttons[0][1]}/>
+          <BoardButton value={this.props.buttons[0][2]}/>
+          <BoardButton value={this.props.buttons[0][3]}/>
         </div>
         <div>
-          <BoardButton value={this.props.buttons[4]}/>
-          <BoardButton value={this.props.buttons[5]}/>
-          <BoardButton value={this.props.buttons[6]}/>
-          <BoardButton value={this.props.buttons[7]}/>
+          <BoardButton value={this.props.buttons[1][0]}/>
+          <BoardButton value={this.props.buttons[1][1]}/>
+          <BoardButton value={this.props.buttons[1][2]}/>
+          <BoardButton value={this.props.buttons[1][3]}/>
         </div>
         <div>
-          <BoardButton value={this.props.buttons[8]}/>
-          <BoardButton value={this.props.buttons[9]}/>
-          <BoardButton value={this.props.buttons[10]}/>
-          <BoardButton value={this.props.buttons[11]}/>
+          <BoardButton value={this.props.buttons[2][0]}/>
+          <BoardButton value={this.props.buttons[2][1]}/>
+          <BoardButton value={this.props.buttons[2][2]}/>
+          <BoardButton value={this.props.buttons[2][3]}/>
         </div>
         <div>
-          <BoardButton value={this.props.buttons[12]}/>
-          <BoardButton value={this.props.buttons[13]}/>
-          <BoardButton value={this.props.buttons[14]}/>
-          <BoardButton value={this.props.buttons[15]}/>
+          <BoardButton value={this.props.buttons[3][0]}/>
+          <BoardButton value={this.props.buttons[3][1]}/>
+          <BoardButton value={this.props.buttons[3][2]}/>
+          <BoardButton value={this.props.buttons[3][3]}/>
         </div>
       </div>
     );
