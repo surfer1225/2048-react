@@ -18,12 +18,6 @@ class Board extends Component {
   seedOne() {
     let tempButtons = this.state.buttons;
     let num = Math.floor(Math.random()*16);
-    /*
-    console.log(tempButtons[num]);
-    console.log("check data: " + (tempButtons[num]!==2)
-    + " and " + (tempButtons[num]===0));
-    */
-
     while (tempButtons[num]!==0) {
       num = Math.floor(Math.random()*16);
     }
@@ -34,11 +28,15 @@ class Board extends Component {
     });
   }
 
-  handleClick() {
-    console.log("button clicked!");
+  handleClick(direction) {
+    console.log(direction);
     if (this.checkGame()) {
       this.seedOne();
       this.seedOne();
+    }
+    else {
+      console.log("no more zero");
+      return;
     }
   }
 
@@ -55,10 +53,10 @@ class Board extends Component {
     return (
       <div>
         <div>
-          <MoveButton value="left" onClick={()=>this.handleClick()}/>
-          <MoveButton value="up"/>
-          <MoveButton value="down"/>
-          <MoveButton value="right"/>
+          <MoveButton value="left" onClick={()=>this.handleClick("L")}/>
+          <MoveButton value="up" onClick={()=>this.handleClick("U")}/>
+          <MoveButton value="down" onClick={()=>this.handleClick("D")}/>
+          <MoveButton value="right" onClick={()=>this.handleClick("R")}/>
         </div>
         <br/>
         <div>
