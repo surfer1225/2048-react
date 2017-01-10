@@ -39,7 +39,7 @@ class Board extends Component {
     this.move(direction);
     if (this.checkGame()) {
       this.seedOne();
-      this.seedOne();
+      //this.seedOne();
     }
     else {
       console.log("no more zero");
@@ -48,10 +48,23 @@ class Board extends Component {
   }
 
   move(dir) {
+    let tempButtons = this.state.buttons;
     switch (dir) {
       case "L":
         //console.log("move left");
-        
+        for (let k=0;k<4;k++) {
+          for (let j=0;j<3;j++) {
+            if (tempButtons[k][j]===0) {
+              tempButtons[k][j]=tempButtons[0][j+1];
+              tempButtons[k][j+1]=0;
+            }
+          }
+        }
+        for (let i=1;i<3;i++) {
+          if (tempButtons[0][i]===tempButtons[0][i-1]) {
+            tempButtons[0][i-1]=tempButtons[0][i-1]*2;
+          }
+        }
         break;
       case "U":
 
@@ -65,6 +78,9 @@ class Board extends Component {
       default:
 
     }
+    this.setState({
+      buttons: tempButtons
+    });
     return;
   }
 
