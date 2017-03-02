@@ -8,12 +8,12 @@ class Board extends Component {
     let tempButtons = Array(4);
     for (let i=0;i<4;i++) {
       tempButtons[i] = Array(4).fill(0);
-    }
+    };
     let num1 = Math.floor(Math.random()*16);
     let num2 = Math.floor(Math.random()*16);
     while (num2===num1) {
       num2 = Math.floor(Math.random()*16);
-    }
+    };
     tempButtons[Math.floor(num1/4)][num1%4] = 2;
     tempButtons[Math.floor(num2/4)][num2%4] = 2;
     this.state = {
@@ -59,12 +59,12 @@ class Board extends Component {
               tempButtons[k][j+1]=0;
             }
           }
-        }
+        };
         for (let i=1;i<3;i++) {
           if (tempButtons[0][i]===tempButtons[0][i-1]) {
             tempButtons[0][i-1]=tempButtons[0][i-1]*2;
           }
-        }
+        };
         break;
       case "U":
 
@@ -89,7 +89,7 @@ class Board extends Component {
       if (this.state.buttons[Math.floor(i/4)][i%4]===0) {
         return true;
       }
-    }
+    };
     return false;
   }
 
